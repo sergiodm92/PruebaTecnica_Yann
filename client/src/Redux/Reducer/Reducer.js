@@ -1,14 +1,13 @@
 const initialState = {
-    validate:''
+    link:''
 }
 
 const rootReducer = (state = initialState, action) => {
     const { type, payload } = action;
     switch (action.type) {
-        case "URL_STATUS":
+        case "LINK":
             return{
-                ...state,
-                validate: action.payload
+                link: action.payload
             }
             default:
                 return state;
